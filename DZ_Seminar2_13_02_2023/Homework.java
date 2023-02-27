@@ -15,18 +15,18 @@ public class Homework {
     }
 
     public static String modifiedString(String str) {
-        if (str.isEmpty())
-            return "Строка пустая. Попробуйте ещё раз";
-        str = str.trim();
-        String modStr = str.replaceAll(" +", " ");
-        StringBuilder sb = new StringBuilder(modStr);
-        for (int i = 1; i < sb.length(); i++) {
-            if (Character.isUpperCase(sb.charAt(i))) {
-                sb.insert(i - 1, ".");
-                i++;
+            if (str.isEmpty())
+                return "Строка пустая. Попробуйте ещё раз";
+            str = str.trim();
+            String modStr = str.replaceAll(" +", " ");
+            StringBuilder sb = new StringBuilder(modStr);
+            for (int i = 1; i < sb.length(); i++) {
+                if (Character.isUpperCase(sb.charAt(i))) {
+                    sb.insert(i - 1, ".");
+                    i++;
+                }
             }
-        }
-        sb.append('.');
-        return sb.toString();
+            sb.append('.');
+            return sb.toString();
     }
 }
